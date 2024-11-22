@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1e5d4c95.css",
+    "main.js": "/static/js/main.6de405bd.js",
+    "static/media/gradient2.png": "/static/media/gradient2.f059cfe6d5e5916f51ef.png",
+    "static/media/projects-img.png": "/static/media/projects-img.bb7adb4af26a9b13fbe2.png",
+    "static/media/other-img.png": "/static/media/other-img.34eef036029f4e65d08d.png",
+    "static/media/phone.png": "/static/media/phone.d0b8653c38fbcb9c1980.png",
+    "static/media/eternity-gradient.png": "/static/media/eternity-gradient.103b4860ffe904a0200b.png",
+    "static/media/teammate2.png": "/static/media/teammate2.b71d35dc6fa1fb49bef7.png",
+    "static/media/teammate1.png": "/static/media/teammate1.f661adc82b054b242035.png",
+    "static/media/handwriting.png": "/static/media/handwriting.a56bce7351d900750200.png",
+    "static/media/teammate3.png": "/static/media/teammate3.a1e3a2f09b7767c46b7d.png",
+    "static/media/figure.png": "/static/media/figure.7026a2b314658b886a1f.png",
+    "static/media/eternity.png": "/static/media/eternity.347656d55d2edb445568.png",
+    "index.html": "/index.html",
+    "main.1e5d4c95.css.map": "/static/css/main.1e5d4c95.css.map",
+    "main.6de405bd.js.map": "/static/js/main.6de405bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e5d4c95.css",
+    "static/js/main.6de405bd.js"
+  ]
+}
