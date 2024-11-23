@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import phoneImage from "../assets/phone.png";
 import logo from "../assets/logo.png";
 import arrow from "../assets/arrow.png";
@@ -8,6 +8,19 @@ import logo3 from "../assets/logo3.png";
 import logo4 from "../assets/logo4.png";
 
 const HeroSection = () => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isMenuAnimating, setIsMenuAnimating] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuVisible(true);
+    setTimeout(() => setIsMenuAnimating(true), 10);
+  };
+
+  const closeMenu = () => {
+    setIsMenuAnimating(false);
+    setTimeout(() => setIsMenuVisible(false), 300);
+  };
+
   return (
     <section className="hero">
       <nav className="navbar">
@@ -18,7 +31,9 @@ const HeroSection = () => {
           <li>Contact</li>
           <li>Career</li>
         </ul>
-        <div className="menu-icon">Menu ☰</div>
+        <div className="menu-icon" onClick={openMenu}>
+          Menu ☰
+        </div>
       </nav>
 
       <div className="hero-content">
@@ -49,6 +64,45 @@ const HeroSection = () => {
           <img src={logo4} className="logo-blockchange" alt="logo-4" />
         </div>
       </div>
+
+      {isMenuVisible && (
+        <div
+          className={`menu-modal ${
+            isMenuAnimating ? "menu-modal-opening" : "menu-modal-closing"
+          }`}
+        >
+          <div className="menu-content">
+            <button className="close-button" onClick={closeMenu}>
+              Close ✖
+            </button>
+            <div className="menu-items">
+              <div className="menu-section">
+                <h2>Home</h2>
+                <p>Our Projects</p>
+                <ul>
+                  <li>Traekee</li>
+                  <li>WingRiders</li>
+                  <li>Worldcoin</li>
+                </ul>
+              </div>
+              <div className="menu-section">
+                <h2>About</h2>
+                <p>Follow us</p>
+                <ul>
+                  <li>Instagram</li>
+                  <li>Dribbble</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </div>
+              <div className="menu-section">
+                <h2>Contact</h2>
+                <p>Direct contact</p>
+                <p>hello@thirdweb.studio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
